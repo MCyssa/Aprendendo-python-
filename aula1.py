@@ -46,4 +46,18 @@ str2 = "Mundo"
 resultado = str1 + " " + str2
 print (resultado)
 
-print ("Olá mundo!")
+# programa extra para treinar: analisador de texto
+
+texto = input("Digite uma frase ou texto: ")
+
+palavras = texto.split()
+
+num_palavras = len(palavras)
+
+palavra_mais_longa = max(palavras, key=len)
+
+texto_invertido = ' '.join(palavras[::-1])
+
+print(f"Número de palavras: {num_palavras}")
+print(f"Palavras mais longa: {palavra_mais_longa}")
+print(f"Texto com palavras em ordem invertida: {texto_invertido}")
