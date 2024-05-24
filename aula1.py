@@ -17,9 +17,9 @@ print (pi)
 
 #exercício
 
-nome = "Maria"
-idade = 20 
-cidade = "Barra do Ribeiro"
+nome = "Julia"
+idade = 30
+cidade = "Florianópolis"
 
 print (f"Nome: {nome}")
 print (f"Idade: {idade}")
