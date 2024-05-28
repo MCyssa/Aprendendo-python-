@@ -1,4 +1,4 @@
-# Jogo de adivinhação
+# Adivinhe o número!
 import random
 
 numero_secreto = random.randint(1, 100)
@@ -14,9 +14,9 @@ while tentativa != numero_secreto:
     elif tentativa > numero_secreto:
         print("Muito alto!")
     else:
-        print("Parabéns! Você acertou o número.")
+        print("Parabéns! Você acertou o número.")/n
 
-
+print("Concluiu o primeiro jogo. Agora começará o Jogo da Forca.")/n
 # Jogo da Forca
 import random
 
