@@ -14,9 +14,9 @@ while tentativa != numero_secreto:
     elif tentativa > numero_secreto:
         print("Muito alto!")
     else:
-        print("Parabéns! Você acertou o número.")/n
+        print("Parabéns! Você acertou o número.")
 
-print("Concluiu o primeiro jogo. Agora começará o Jogo da Forca.")/n
+print("Concluiu o primeiro jogo. Agora começará o Jogo da Forca.")
 # Jogo da Forca
 import random
 
