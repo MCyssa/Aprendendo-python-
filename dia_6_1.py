@@ -7,12 +7,25 @@ def adicionarProduto(lista):
     print("Produto adicionado.")
 
 def removerProduto(lista):
-    produto = input("Digite o produto que deseja excluir: ").title()
-    if produto in lista: 
-        lista.pop(produto)
-        print("Produto removido.")
+    try:
+        produto = input('Digite o nome do produto que deseja excluir: ').title()
+        if produto in lista:
+            lista.pop(produto)
+            print("O produto foi excluido!\n")
+        else:
+            print("Produto não encontrado!\n")
+
+    except Exception as e:
+        print(f"Erro: {e}\n")
+
+def visualizarProduto(lista):
+    if lista:
+        print("Lista de produtos")
+        for produto, quantidade in lista.items():
+            print(f"{produto}: {quantidade}")
+
     else:
-        print("Produto não encontrado.")
+        print("A lista de produtos está vazia.\n")
 
 def salvarProduto(lista, dia_6_2):
     try:
@@ -23,7 +36,8 @@ def salvarProduto(lista, dia_6_2):
             print("Produtos salvos.")
     except IOError:
         print("Erro ao salvar produtos no arquivo.\n")
-
+         
+ 
 def menuPrincipal():
     try: 
         lista = {}
@@ -31,7 +45,8 @@ def menuPrincipal():
         while True:
             print("1. Adicionar produto.")
             print("2. Remover produto.")
-            print("3. Salvar e sair.")
+            print("3. Visualizar produtos.")
+            print("4. Salvar e sair.")
             escolha = input("Digite sua escolha: ")
 
             if (escolha == '1'):
@@ -41,13 +56,16 @@ def menuPrincipal():
                 removerProduto(lista)
 
             elif (escolha == '3'):
+                visualizarProduto(lista)
+
+            elif (escolha == '4'):
                 opcao = input("Você deseja salvar seus contatos em um arquivo? (s|N): ").lower()
                 if (opcao == 's'):
                     dia_6_2 = 'dia_6_2.txt'
                     salvarProduto(lista, dia_6_2)
                     print("Finalizando programa, seu produto foi adicionado no arquivo!\n")
                 else: 
-                    print("Erro.")
+                    print("Programa encerrado.")
                 break
     except Exception as e:
         print(f'Erro: {e}!\n')
