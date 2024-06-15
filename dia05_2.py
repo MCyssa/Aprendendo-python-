@@ -1,6 +1,6 @@
 import dia05_1
 
-print("Bem-vindo a calculadora simples.")
+print("Bem-vindo a calculadora simples!")
 print("1. Para somar.")
 print("2. Para subtrair.")
 print("3. Para multiplicar.")

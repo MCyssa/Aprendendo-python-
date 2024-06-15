@@ -28,5 +28,5 @@ def div():
         r4 = a / b
         print(r4)
     else:
-        print("Erro: divisão por 0.")
+        print("Ocorreu um erro: divisão por 0.")
     
