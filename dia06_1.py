@@ -59,7 +59,7 @@ def menuPrincipal():
                 visualizarProduto(lista)
 
             elif (escolha == '4'):
-                opcao = input("Você deseja salvar seus contatos em um arquivo? (s|N): ").lower()
+                opcao = input("Deseja salvar seus contatos em um arquivo? (s|N): ").lower()
                 if (opcao == 's'):
                     dia06_2 = 'dia06_2.txt'
                     salvarProduto(lista, dia06_2)
