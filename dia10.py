@@ -46,6 +46,6 @@ def gerenciar_estoque():
             print(f"Estoque atualizado: {estoque}")
 
         finally:
-            print("Operação de estoque concluída.")
+            print("Operação concluída.")
 
 gerenciar_estoque()   
