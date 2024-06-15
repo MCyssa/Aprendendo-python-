@@ -48,7 +48,7 @@ def completarTarefa(tarefa_index):
 
 def editarTarefa(tarefa_index):
     try:
-        edicao = input("Digite 1 para editar a tarefa ou 2 para editar a descrição: ")
+        edicao = input("1. Editar Tarefa ou 2. Editar Descrição: ")
         if edicao == '1':
             nova_tarefa = input("Digite o novo nome da Tarefa: ")
             tarefas[tarefa_index]['Tarefa'] = nova_tarefa
