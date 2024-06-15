@@ -28,7 +28,7 @@ print(f"A frase contém a palavra '{palavra}'? {contem_palavra}")
 
 # Manupulação de Listas:
  
-numeros = input("Digite uma lista de números separados por espaço: ")
+numeros = input("Digite uma lista de números: ")
 
 # Convertendo para uma lista de inteiros
 lista_num = list(map(int, numeros.split()))
