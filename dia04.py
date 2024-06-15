@@ -8,7 +8,7 @@ def gerar_senha(tamanho):
     senha = ''.join(random.choice(caracteres) for i in range(tamanho))
     return senha
 
-tamanho = int(input("Digite o tamanho da senha: "))
+tamanho = int(input("Quantos caracteres a senha irá ter?: "))
 
 senha = gerar_senha(tamanho)
 print(f"A senha gerada é: {senha}")
