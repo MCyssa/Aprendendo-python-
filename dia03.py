@@ -33,7 +33,7 @@ while tentativas > 0:
     letra = input("Digite uma letra: ").lower()
     
     if letra in letras_adivinhadas:
-        print("Você já tentou essa letra. Tente outra.")
+        print("Você já tentou essa letra. Tente novamente.")
         continue
     
     letras_adivinhadas.append(letra)
