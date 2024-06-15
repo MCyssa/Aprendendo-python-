@@ -1,12 +1,1 @@
-[
-    {
-        "Tarefa": "Desenho",
-        "Descrição": "estudar anatomia e formas ",
-        "completed": false
-    },
-    {
-        "Tarefa": "Python",
-        "Descrição": "escrever um código em python",
-        "completed": true
-    }
-]
+[]
