@@ -1,3 +1,0 @@
-Celular: 600
-Notebook: 100
-Tablet: 500

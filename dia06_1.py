@@ -27,9 +27,9 @@ def visualizarProduto(lista):
     else:
         print("A lista de produtos está vazia.\n")
 
-def salvarProduto(lista, dia_6_2):
+def salvarProduto(lista, dia06_2):
     try:
-        with open(dia_6_2, 'w') as arquivo:
+        with open(dia06_2, 'w') as arquivo:
             for produto in sorted(lista.keys()):
                 quantidade = lista[produto]
                 arquivo.write(f"{produto}: {quantidade}\n") 
@@ -61,8 +61,8 @@ def menuPrincipal():
             elif (escolha == '4'):
                 opcao = input("Você deseja salvar seus contatos em um arquivo? (s|N): ").lower()
                 if (opcao == 's'):
-                    dia_6_2 = 'dia_6_2.txt'
-                    salvarProduto(lista, dia_6_2)
+                    dia06_2 = 'dia06_2.txt'
+                    salvarProduto(lista, dia06_2)
                     print("Finalizando programa, seu produto foi adicionado no arquivo!\n")
                 else: 
                     print("Programa encerrado.")
