@@ -1,4 +1,4 @@
-nome = input("Qual seu nome completo?: ").title()
+nome = input("Digite seu nome completo: ").title()
 posicao = nome.find(" ")
 primeiro_nome = nome[:posicao]
 print(f"Olá, {primeiro_nome}! Vamos começar o processamento de confirmação de email.")
