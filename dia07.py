@@ -56,7 +56,7 @@ def menuPrincipal():
             print("4. Para dividir.")
             print("5. Para calcular a média.")
             print("6. Para fatorar.")
-            print("Qualquer outro valor para encerrar o programa.")
+            print("7. Encerrar o programa.")
             escolha = input("Escolha uma opção: ")
 
             if (escolha == '1'):
@@ -77,10 +77,13 @@ def menuPrincipal():
             elif (escolha == '6'):
                 fatorial()
 
-            else:
+            elif (escolha == '7'):        
                 print("Programa encerrado.")
                 break
-    
+
+            else:
+                print("Operação inválida.")
+
     except Exception as e:
         print(f'Erro: {e}!\n')
 
