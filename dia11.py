@@ -5,7 +5,7 @@ import requests
 def obter_dados(url):
     resposta = requests.get(url)
     if resposta.status_code == 200:
-        print("Requisição bem-sucedida!")
+        print("Requisição bem-sucedida.")
         return resposta.json()  
     else:
         print(f"Erro na requisição: {resposta.status_code}")
