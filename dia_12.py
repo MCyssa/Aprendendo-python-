@@ -1,15 +1,30 @@
-# Interface de linha de comando para o usuário interagir com o genrenciador de tarefas
+# Interface de linha de comando para o usuário interagir com o gerenciador de tarefas
+import json
+
 tarefas = []
+
+def carregarTarefas(filename):
+    try:
+        with open(filename, 'r', encoding='utf-8') as arquivo:
+            return json.load(arquivo)
+    except FileNotFoundError:
+        return []
+
+def salvarTarefas(filename):
+    with open(filename, 'w', encoding='utf-8') as arquivo:
+        json.dump(tarefas, arquivo, ensure_ascii=False, indent=4)
 
 def adicionarTarefa():
     tarefa = input("Digite o nome da tarefa: ").title()
     descricao = input("Descreva a tarefa: ").lower()
     tarefas.append({'Tarefa': tarefa, 'Descrição': descricao, 'completed': False})
+    salvarTarefas('tarefas.json')
     print(f"Tarefa '{tarefa}' adicionada com sucesso!")
 
 def removerTarefa(tarefa_index):
     try:
         tarefa = tarefas.pop(tarefa_index)
+        salvarTarefas('tarefas.json')
         print(f"Tarefa '{tarefa['Tarefa']}' removida com sucesso!")
     except IndexError:
         print("Ìndice de tarefa inválido.")
@@ -26,6 +41,7 @@ def listarTarefas():
 def completarTarefa(tarefa_index):
     try:
         tarefas[tarefa_index]['completed'] = True
+        salvarTarefas('tarefas.json')
         print(f"Tarefa '{tarefas[tarefa_index]['Tarefa']}' marcada como concluída.")
     except IndexError:
         print("Ìndice de tarefa inválido.")
@@ -36,11 +52,13 @@ def editarTarefa(tarefa_index):
         if edicao == '1':
             nova_tarefa = input("Digite o novo nome da Tarefa: ")
             tarefas[tarefa_index]['Tarefa'] = nova_tarefa
+            salvarTarefas('tarefas.json')
             print(f"Tarefa '{tarefa_index}' editada com sucesso!")
 
         elif edicao == '2':
             nova_descricao = input("Digite a nova descrição: ")
             tarefas[tarefa_index]['Descrição'] = nova_descricao
+            salvarTarefas('tarefas.json')
             print(f"Tarefa '{tarefa_index}' editada com sucesso!")
 
         else:
@@ -49,6 +67,9 @@ def editarTarefa(tarefa_index):
         print("Ìndice de tarefa inválido.")
 
 def main():
+    global tarefas
+    tarefas = carregarTarefas('tarefas.json')
+
     while True:
         print("\nGerenciador de Tarefas")
         print("1. Adicionar Tarefa")
