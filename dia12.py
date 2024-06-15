@@ -31,7 +31,7 @@ def removerTarefa(tarefa_index):
 
 def listarTarefas():
     if not tarefas:
-        print("O arquivo está vazio.")
+        print("O arquivo está vazio!")
         return
     
     for index, tarefa in enumerate(tarefas):
