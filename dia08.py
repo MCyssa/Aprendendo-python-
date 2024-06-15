@@ -1,6 +1,6 @@
 produtos = [
     {"nome": "Laptop", "preço": 3000.00, "quantidade": 10},
-    {"nome": "Mouse", "preço": 50.00, "quantidade": 100},
+    {"nome": "Mouse", "preço": 20.00, "quantidade": 100},
     {"nome": "Teclado", "preço": 150.00, "quantidade": 150},
     {"nome": "Monitor", "preço": 800.00, "quantidade": 50},
     {"nome": "Headphone", "preço": 200.00, "quantidade": 30},
